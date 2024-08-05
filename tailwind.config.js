@@ -4,8 +4,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        sm: '375px',
-        xl: '1440px',
+
       },
       colors: {
         'dark-blue-dm': '#1A202C',

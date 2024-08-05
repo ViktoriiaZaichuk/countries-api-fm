@@ -4,8 +4,6 @@
 </script>
 
 <template>
-
-
   <main>
     <Header />
     <RouterView />

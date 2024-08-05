@@ -12,12 +12,12 @@ const props = defineProps({
     <div class="">
         <RouterLink
           :to="country.alpha3Code"
-          class="h-[36px] bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-center text-sm"
-        />
-        <div>
+          class="cursor-pointer"
+        >
+        <div class="">
           <img :src="country.flags.svg" :alt="country.name + ' flag'">
         </div>
-        <h2>{{ country.name }}</h2>
+        <h2 class="">{{ country.name }}</h2>
         <ul>
             <li>
                 <strong>Population:</strong> {{ country.population }}
@@ -29,5 +29,6 @@ const props = defineProps({
                 <strong>Capital:</strong> {{ country.capital }}
             </li>
         </ul>
+        </RouterLink>
     </div>
 </template>

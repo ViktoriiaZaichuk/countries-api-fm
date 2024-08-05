@@ -66,7 +66,10 @@ onMounted(async () => {
           </li>
           <li>
             <strong>Currencies:</strong>
-            <span v-for="currency in state.country.currencies" :key="currency.code">
+            <span 
+              v-for="currency in state.country.currencies" 
+              :key="currency.code"
+            >
               {{ currency.name }} ({{ currency.symbol }})
             </span>
           </li>
