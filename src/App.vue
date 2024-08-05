@@ -4,8 +4,8 @@
 </script>
 
 <template>
-  <main>
-    <Header />
+  <Header />
+  <main class="bg-very-light-gray-lm dark:bg-very-dark-blue-dm text-very-dark-blue-dm dark:text-white">
     <RouterView />
   </main>
 </template>

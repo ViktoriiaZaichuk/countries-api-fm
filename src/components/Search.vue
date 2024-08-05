@@ -31,6 +31,7 @@ function notifyParent() {
             type="search"
             placeholder="Search for a country…"
             aria-label="Search countries"
+            class="bg-very-light-gray-lm dark:bg-very-dark-blue-dm text-very-dark-blue-dm dark:text-white"
         >
     </div>
 </template>

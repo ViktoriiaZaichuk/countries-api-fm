@@ -28,6 +28,7 @@ function notifyParent() {
         <select 
             v-model="selectedRegionLocal" 
             @change="notifyParent"
+            class="bg-very-light-gray-lm dark:bg-very-dark-blue-dm text-very-dark-blue-dm dark:text-white"
         >
           <option value="Filter by Region">Filter by Region</option>
           <option value="Africa">Africa</option>

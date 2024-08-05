@@ -9,7 +9,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="">
+    <div class="overflow-hidden rounded-lg shadow-lg shadow-dark-blue">
         <RouterLink
           :to="country.alpha3Code"
           class="cursor-pointer"
