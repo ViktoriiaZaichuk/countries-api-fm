@@ -6,6 +6,7 @@ import axios from 'axios';
 // Define props to receive the selected region from the parent component
 const props = defineProps({
   selectedRegion: String,
+  searchQuery: String,
 });
 
 // Reactive state to manage countries, loading, and error state
@@ -30,12 +31,21 @@ onMounted(async () => {
 
 // Compute filtered countries based on the selected region
 const filteredCountries = computed(() => {
+  let filtered = state.countries;
+
   if (props.selectedRegion !== 'Filter by Region') {
-    return state.countries.filter(country => country.region === props.selectedRegion);
-  } else {
-    return state.countries;
+    filtered = filtered.filter(country => country.region === props.selectedRegion);
   }
-});
+
+  if (props.searchQuery) {
+    const query = props.searchQuery.toLowerCase();
+    filtered = filtered.filter(country => country.name.toLowerCase().includes(query));
+  }
+
+  return filtered;
+}, 300);
+
+
 </script>
 
 <template>
@@ -46,7 +56,7 @@ const filteredCountries = computed(() => {
       <p class="error-message">{{ state.error }}</p>
     </div>
 
-    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <section class="grid grid-cols-1 md:grid-cols-4 gap-6">
         <CountryCard 
           v-for="country in filteredCountries" 
           :key="country.alpha3Code" 

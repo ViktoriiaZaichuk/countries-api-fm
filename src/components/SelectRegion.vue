@@ -1,6 +1,5 @@
 <script setup>
-import { ref, watch } from 'vue';
-import { defineProps, defineEmits } from 'vue';
+import { ref, watch, defineProps, defineEmits } from 'vue';
 
 // Define props to receive the selected region from the parent component
 const props = defineProps({
@@ -22,19 +21,17 @@ watch(selectedRegionLocal, (newValue) => {
 function notifyParent() {
   emit('updateRegion', selectedRegionLocal.value);
 }
-
 </script>
 
 <template>
     <div>
-
         <select 
             v-model="selectedRegionLocal" 
             @change="notifyParent"
         >
           <option value="Filter by Region">Filter by Region</option>
           <option value="Africa">Africa</option>
-          <option value="America">America</option>
+          <option value="Americas">Americas</option>
           <option value="Asia">Asia</option>
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>
