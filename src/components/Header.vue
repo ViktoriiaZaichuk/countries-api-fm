@@ -23,12 +23,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="flex items-center justify-between bg-white dark:bg-dark-blue-dm text-very-dark-blue-dm dark:text-white">
-    <h1>Where in the world?</h1>
+  <header class="p-6 flex items-center justify-between bg-white dark:bg-dark-blue-dm text-very-dark-blue-dm dark:text-white shadow-xl shadow-dark-blue">
+    <h1 class="font-black text-xl">Where in the world?</h1>
     <button 
       @click="toggleDarkMode"
+      class="text-bold"
     >
-      {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+      <span class="font-bold">{{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}</span>
     </button>
   </header>
 </template>

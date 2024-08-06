@@ -56,7 +56,7 @@ const filteredCountries = computed(() => {
       <p class="error-message">{{ state.error }}</p>
     </div>
 
-    <section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <section class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-8">
         <CountryCard 
           v-for="country in filteredCountries" 
           :key="country.alpha3Code" 

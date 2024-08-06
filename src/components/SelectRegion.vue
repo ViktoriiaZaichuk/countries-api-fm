@@ -28,7 +28,7 @@ function notifyParent() {
         <select 
             v-model="selectedRegionLocal" 
             @change="notifyParent"
-            class="bg-very-light-gray-lm dark:bg-very-dark-blue-dm text-very-dark-blue-dm dark:text-white"
+            class="bg-very-light-gray-lm dark:bg-very-dark-blue-dm text-very-dark-blue-dm dark:text-white shadow-lg shadow-dark-blue p-3 rounded-lg"
         >
           <option value="Filter by Region">Filter by Region</option>
           <option value="Africa">Africa</option>
@@ -37,8 +37,5 @@ function notifyParent() {
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>
         </select>
-      
-        <!-- Display the selected value for debugging purposes -->
-        <p>Selected Region: {{ selectedRegion }}</p>
     </div>
 </template>

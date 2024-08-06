@@ -20,7 +20,7 @@ function updateSearchQuery(query) {
 </script>
 
 <template>
-    <div class="flex flex-col justify-between items-start sm:flex-row sm:items-center">
+    <div class="py-6 flex flex-col justify-between items-start sm:flex-row sm:items-center">
         <Search 
             :countrySearch="searchQuery" 
             @updateSearch="updateSearchQuery"
